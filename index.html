@@ -40,14 +40,14 @@
       <!--Fin: username-->
 
       <!--Inicio: Buttons-->
-      <section class="row pt-5">
+      <section class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-3">
-            <button type="button" class="btn btn-info btn-lg btn-block" id="btnPlay">Play!!</button>
+        <div class="col-md-3 pt-5">
+          <button type="button" class="btn btn-info btn-lg btn-block" id="btnPlay">Play!!</button>
         </div>
         <div class="col-md-2"></div>
-        <div class="col-md-3">
-            <button type="button" class="btn btn-danger btn-lg btn-block" id="btnFinish">Finish :(</button>
+        <div class="col-md-3 pt-5">
+          <button type="button" class="btn btn-danger btn-lg btn-block" id="btnFinish">Finish :(</button>
         </div>
         <div class="col-md-2"></div>
       </section>
@@ -60,24 +60,23 @@
       <!-- Fin: Output Error Username -->
 
       <!--Inicio: Choose an option-->
-      <section class="row pt-5 d-none" id="sectionOptions">
-        <p class="col-md-3 text-right font-weight-bold text-secondary">Choose an option</p>
-        <div class="col-md-2">
-          <label for="game" class="mr-2 ml-5">Stone</label>
-          <input type="radio" name="game" value="Stone" class="option">
+      <section class="pt-5 d-none" id="sectionOptions">
+        <div class="row">
+          <h2 class="col-md-12 text-center font-weight-bold text-secondary">Choose an option</h2>
         </div>
-
-        <div class="col-md-2">
-          <label for="game" class="mr-2 ml-5">Paper</label>
-          <input type="radio" name="game" value="Paper" class="option">
+        <div class="row" id="options">
+          <div class="col-md-2">
+            <img src="imgs/stone.png" alt="Stone Image" class="img-fluid imageOption" value="stone">
+          </div>
+          <div class="col-md-3"></div>
+          <div class="col-md-2">
+            <img src="imgs/paper.png" alt="Stone Image" class="img-fluid imageOption" value="paper">
+          </div>
+          <div class="col-md-3"></div>
+          <div class="col-md-2 mt-4">
+            <img src="imgs/scissor.png" alt="Stone Image" class="img-fluid imageOption" value="scissor">
+          </div>
         </div>
-
-        <div class="col-md-2">
-          <label for="game" class="mr-2 ml-5">Scissors</label>
-          <input type="radio" name="game" value="Scissors" class="option">
-        </div>
-
-        <div class="d-none d-md-block col-md-3"></div>
       </section>
       <!--Fin: Choose an option-->
 
