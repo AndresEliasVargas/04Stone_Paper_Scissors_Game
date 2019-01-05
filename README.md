@@ -1,4 +1,4 @@
-# 04Stone_Paper_Scissors_Game
+# Stone, Paper & Scissors Game
 Simple Game of stone, paper or scissors
 
 **Languajes**
