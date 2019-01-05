@@ -20,6 +20,7 @@
 
     <form class="container">
 
+      <!--Inicio: username-->
       <section class="col-12">
         <div class="row">
           <div class="col-md-3"></div>
@@ -30,35 +31,16 @@
             <div class="row">
               <div class="col-md-2"></div>
               <input type="text" id="txtUserName" class="col-md-8" required>
-              <output class="text-center" id="txtOutputName"></output>
               <div class="col-md-2"></div>
             </div>
           </div>
           <div class="col-md-3"></div>
         </div>
-
-        <div class="row pt-5">
-          <p class="col-md-3 text-right font-weight-bold text-secondary">Choose an option</p>
-          <div class="col-md-2">
-            <label for="game" class="mr-2 ml-5">Stone</label>
-            <input type="radio" name="game" value="Stone" class="option">
-          </div>
-
-          <div class="col-md-2">
-            <label for="game" class="mr-2 ml-5">Paper</label>
-            <input type="radio" name="game" value="Paper" class="option">
-          </div>
-
-          <div class="col-md-2">
-            <label for="game" class="mr-2 ml-5">Scissors</label>
-            <input type="radio" name="game" value="Scissors" class="option">
-          </div>
-
-          <div class="d-none d-md-block col-md-3"></div>
-        </div>
       </section>
+      <!--Fin: username-->
 
-      <div class="row pt-5">
+      <!--Inicio: Buttons-->
+      <section class="row pt-5">
         <div class="col-md-2"></div>
         <div class="col-md-3">
             <button type="button" class="btn btn-info btn-lg btn-block" id="btnPlay">Play!!</button>
@@ -68,7 +50,36 @@
             <button type="button" class="btn btn-danger btn-lg btn-block" id="btnFinish">Finish :(</button>
         </div>
         <div class="col-md-2"></div>
+      </section>
+      <!--Fin:  Buttons-->
+
+      <!-- Inicio: Output Error Username -->
+      <div class="text-center pt-3">
+        <output id="txtOutputName"></output>
       </div>
+      <!-- Fin: Output Error Username -->
+
+      <!--Inicio: Choose an option-->
+      <section class="row pt-5 d-none" id="sectionOptions">
+        <p class="col-md-3 text-right font-weight-bold text-secondary">Choose an option</p>
+        <div class="col-md-2">
+          <label for="game" class="mr-2 ml-5">Stone</label>
+          <input type="radio" name="game" value="Stone" class="option">
+        </div>
+
+        <div class="col-md-2">
+          <label for="game" class="mr-2 ml-5">Paper</label>
+          <input type="radio" name="game" value="Paper" class="option">
+        </div>
+
+        <div class="col-md-2">
+          <label for="game" class="mr-2 ml-5">Scissors</label>
+          <input type="radio" name="game" value="Scissors" class="option">
+        </div>
+
+        <div class="d-none d-md-block col-md-3"></div>
+      </section>
+      <!--Fin: Choose an option-->
 
     </form>
   </div>
