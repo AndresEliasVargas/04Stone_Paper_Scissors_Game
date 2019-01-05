@@ -2,37 +2,40 @@
 
 const btnPlay = document.querySelector('#btnPlay');
 const btnFinish = document.querySelector('#btnFinish');
+const sOutput = document.querySelector('#txtOutputName');
 let sUser = document.querySelector('#txtUserName');
 let sOption = document.querySelector('.option');
 
-const validateUser = (psUser, psOption) => {
+btnFinish.disabled = true; //Disable finish button
+
+const validateUser = (psUser) => {
 
     let bError = false;
 
     if(psUser === '' || psUser === undefined){
         bError = true;
-    }else if(psOption === '' || psOption === undefined){
-        bError = true;
     };
+    // else if(psOption === '' || psOption === undefined){
+    //     bError = true;
+    // };
 
     return bError;
 
 };
 
 const letsPlay = () => {
-    const sUserName = sUser.value;
+    let sUserName = sUser.value;
+    //const sOptionUser = sOption.value;
 
-    /*NO REFRESCA EL CAMBIO DE OPCIÓN*/
-    const sOptionUser = sOption.value;
-
-    let bError = validateUser(sUserName, sOptionUser);
+    let bError = validateUser(sUserName);
 
     if(bError == true){
-        alert('ERROR');
+        sOutput.innerHTML = '<p class="text-danger font-weight-bold display-4">User name required</p>';
+        btnFinish.disabled = true; //Disable finish button
     }else{
-
-        console.log(sUserName);
-        console.log(sOptionUser);
+        sOutput.innerHTML = ''; //erase error
+        sUser.disabled = true; //disable input user name
+        btnFinish.disabled = false; //enable Finish btn
 
 
 
@@ -41,7 +44,8 @@ const letsPlay = () => {
 };
 
 const finishGame = () => {
-    
+    sUser.value = ''; //erase input text value
+    sUser.disabled = false; //enable user name
 };
 
 btnPlay.addEventListener('click', letsPlay);
